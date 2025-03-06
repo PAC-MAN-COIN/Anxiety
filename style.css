@@ -1,5 +1,5 @@
 /* Global Styles */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Roboto+Mono:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -74,12 +74,12 @@ body {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background: #4CAF50;
+    background: #8A2BE2; /* Purple accent */
     transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #4CAF50;
+    color: #8A2BE2;
 }
 
 .nav-link:hover::after {
@@ -87,7 +87,7 @@ body {
 }
 
 .invest-btn {
-    background: #4CAF50;
+    background: #8A2BE2;
     padding: 10px 25px;
     border-radius: 30px;
     font-size: 1.1rem;
@@ -98,7 +98,7 @@ body {
 }
 
 .invest-btn:hover {
-    background: #388E3C;
+    background: #6A1B9A;
     transform: translateY(-2px);
 }
 
@@ -113,7 +113,7 @@ body {
 }
 
 .menu-toggle:hover {
-    color: #4CAF50;
+    color: #8A2BE2;
 }
 
 /* Hero Section */
@@ -121,7 +121,7 @@ body {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('hero-background.png');
     background-position: center;
     background-size: cover;
-    background-attachment: scroll; /* Ensures parallax works smoothly */
+    background-attachment: scroll;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -138,13 +138,13 @@ body {
 }
 
 .hero-title {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Roboto Mono', monospace;
     font-size: 3.5rem;
-    color: #4CAF50;
+    color: #8A2BE2;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
 }
 
 .hero-subtitle {
@@ -155,10 +155,11 @@ body {
     letter-spacing: 1px;
 }
 
+/* Call-to-Action Button */
 .cta-btn {
     display: inline-block;
     padding: 15px 40px;
-    background: #4CAF50;
+    background: #8A2BE2;
     border-radius: 30px;
     font-size: 1.2rem;
     font-weight: 600;
@@ -168,32 +169,9 @@ body {
 }
 
 .cta-btn:hover {
-    background: #388E3C;
+    background: #6A1B9A;
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.5);
-}
-
-/* Countdown */
-.countdown {
-    padding: 80px 0;
-    text-align: center;
-    background: #141414;
-}
-
-.countdown-text {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 2rem;
-    color: #fff;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.timer {
-    font-size: 2.5rem;
-    color: #4CAF50;
-    font-weight: 600;
-    letter-spacing: 2px;
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.5);
 }
 
 /* About */
@@ -204,13 +182,13 @@ body {
 }
 
 .section-title {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Roboto Mono', monospace;
     font-size: 2.5rem;
-    color: #4CAF50;
+    color: #8A2BE2;
     margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.3);
 }
 
 .description {
@@ -224,96 +202,21 @@ body {
 .contract-address {
     display: inline-block;
     padding: 15px 30px;
-    background: rgba(76, 175, 80, 0.1);
-    border: 2px solid #4CAF50;
+    background: rgba(138, 43, 226, 0.1);
+    border: 2px solid #8A2BE2;
     border-radius: 15px;
     font-size: 1rem;
-    color: #4CAF50;
+    color: #8A2BE2;
     text-decoration: none;
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .contract-address:hover {
-    background: rgba(76, 175, 80, 0.2);
+    background: rgba(138, 43, 226, 0.2);
     transform: translateY(-3px);
 }
 
-/* Server Section */
-.server {
-    padding: 100px 0;
-    background: #141414;
-    text-align: center;
-}
-
-.server-info {
-    margin-top: 40px;
-}
-
-.server-ip {
-    font-size: 1.2rem; /* Reduced from 1.5rem for better fit */
-    color: #4CAF50;
-    margin-bottom: 15px;
-    font-weight: 600;
-    word-wrap: break-word; /* Ensures long text wraps */
-    max-width: 100%;
-}
-
-.server-ip strong {
-    font-family: 'Press Start 2P', cursive;
-    letter-spacing: 1px; /* Reduced for readability */
-}
-
-.server-instructions {
-    font-size: 1.1rem;
-    color: #ccc;
-    margin-bottom: 20px;
-}
-
-.server-btn {
-    display: inline-block;
-    padding: 12px 35px;
-    background: #4CAF50;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #fff;
-    text-decoration: none;
-    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.server-btn:hover {
-    background: #388E3C;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.5);
-}
-
-/* Trailer */
-.trailer {
-    padding: 100px 0;
-    background: #141414;
-    text-align: center;
-}
-
-.video-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
-}
-
-.video-container:hover {
-    transform: scale(1.02);
-}
-
-.video-container iframe {
-    width: 100%;
-    height: 500px;
-    border: none;
-}
-
-/* Socials */
+/* Socials (Telegram Only) */
 .socials {
     padding: 80px 0;
     background: #0a0a0a;
@@ -329,7 +232,7 @@ body {
 
 .social-link {
     padding: 10px 25px;
-    background: #4CAF50;
+    background: #8A2BE2;
     border-radius: 25px;
     font-size: 1.1rem;
     font-weight: 600;
@@ -339,7 +242,7 @@ body {
 }
 
 .social-link:hover {
-    background: #388E3C;
+    background: #6A1B9A;
     transform: translateY(-3px);
 }
 
@@ -353,7 +256,7 @@ body {
 .invest-btn {
     display: inline-block;
     padding: 15px 40px;
-    background: #4CAF50;
+    background: #8A2BE2;
     border-radius: 30px;
     font-size: 1.2rem;
     font-weight: 600;
@@ -363,9 +266,9 @@ body {
 }
 
 .invest-btn:hover {
-    background: #388E3C;
+    background: #6A1B9A;
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.5);
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.5);
 }
 
 /* Footer */
@@ -374,24 +277,17 @@ body {
     background: #0a0a0a;
     text-align: center;
     font-size: 0.9rem;
-    border-top: 1px solid rgba(76, 175, 80, 0.2);
+    border-top: 1px solid rgba(138, 43, 226, 0.2);
 }
 
 .footer-link {
-    color: #4CAF50;
+    color: #8A2BE2;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-link:hover {
-    color: #388E3C;
-}
-
-/* Animations */
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+    color: #6A1B9A;
 }
 
 /* Media Queries */
@@ -404,7 +300,7 @@ body {
         font-size: 1.3rem;
     }
 
-    .cta-btn, .invest-btn, .server-btn {
+    .cta-btn, .invest-btn {
         padding: 12px 35px;
         font-size: 1.1rem;
     }
@@ -414,14 +310,6 @@ body {
     }
 
     .description {
-        font-size: 1.1rem;
-    }
-
-    .video-container iframe {
-        height: 400px;
-    }
-
-    .server-ip {
         font-size: 1.1rem;
     }
 }
@@ -447,7 +335,7 @@ body {
         display: flex;
     }
 
-    .nav-link, .invest-btn, .server-btn {
+    .nav-link, .invest-btn {
         font-size: 1rem;
     }
 
@@ -459,7 +347,7 @@ body {
         font-size: 1.2rem;
     }
 
-    .cta-btn, .invest-btn, .server-btn {
+    .cta-btn, .invest-btn {
         padding: 10px 30px;
         font-size: 1rem;
     }
@@ -472,17 +360,9 @@ body {
         font-size: 1rem;
     }
 
-    .video-container iframe {
-        height: 300px;
-    }
-
     .social-links {
         flex-direction: column;
         gap: 15px;
-    }
-
-    .server-ip {
-        font-size: 1rem;
     }
 }
 
@@ -495,7 +375,7 @@ body {
         font-size: 1rem;
     }
 
-    .cta-btn, .invest-btn, .server-btn {
+    .cta-btn, .invest-btn {
         padding: 8px 25px;
         font-size: 0.9rem;
     }
@@ -508,16 +388,8 @@ body {
         font-size: 0.9rem;
     }
 
-    .video-container iframe {
-        height: 200px;
-    }
-
     .contract-address {
         font-size: 0.9rem;
         padding: 10px 20px;
-    }
-
-    .server-ip {
-        font-size: 0.9rem;
     }
 }
