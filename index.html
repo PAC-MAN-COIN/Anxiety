@@ -33,8 +33,8 @@
         <!-- Hero Section -->
         <section id="hero" class="hero">
             <div class="hero-overlay container">
-                <h1 class="hero-title">ANXIETY Memecoin</h1>
-                <p class="hero-subtitle">Join the viral trend and own a piece of the crypto excitement</p>
+                <img src="logo.png" alt="ANXIETY Memecoin Title" class="hero-logo">
+                <p class="hero-tagline">The Viral TikTok Dance Coin</p>
                 <a href="https://dexscreener.com/solana/675orb1ewxxmpqxnqyzy8hm2fbqammv9e29vycnbhvk6" class="cta-btn" target="_blank">Buy Now</a>
             </div>
         </section>
@@ -71,9 +71,9 @@
         <!-- Video Section -->
         <section class="video-section">
             <div class="video-container">
-                <iframe width="100%" height="auto" src="https://www.youtube.com/embed/egGt1G8vSHQ" title="Anxiety Dance Challenge - TikTok Compilation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe width="100%" height="auto" src="https://www.youtube.com/embed/fMOUVys0PIA" title="Somebody's watching me, it's my anxiety - tiktok dance trend #shorts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe width="100%" height="auto" src="https://www.youtube.com/embed/LCPJKd0DF4g" title="anxiety dance 👀 #dance #fyp #trend #viral #tiktoksounds #tiktok #subscribe #fyp" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/egGt1G8vSHQ" title="Anxiety Dance Challenge - TikTok Compilation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/fMOUVys0PIA" title="Somebody's watching me, it's my anxiety - tiktok dance trend #shorts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/LCPJKd0DF4g" title="anxiety dance 👀 #dance #fyp #trend #viral #tiktoksounds #tiktok #subscribe #fyp" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </section>
     </main>
@@ -106,15 +106,27 @@
             });
         });
 
-        // Parallax Effect for Hero
+        // Enhanced Parallax Effect for Hero Background
         gsap.to('#hero', {
-            backgroundPosition: 'center 0%',
+            backgroundPosition: 'center 60%', // Moves background more noticeably
             ease: 'none',
             scrollTrigger: {
                 trigger: '#hero',
                 start: 'top top',
                 end: 'bottom top',
-                scrub: 0.5
+                scrub: 1 // Smoother and more pronounced effect
+            }
+        });
+
+        // Parallax Effect for Hero Logo
+        gsap.to('.hero-logo', {
+            y: 50, // Slight vertical movement
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '#hero',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: 1.5 // Slightly faster than background for depth
             }
         });
     </script>
