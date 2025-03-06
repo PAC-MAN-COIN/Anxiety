@@ -37,7 +37,19 @@
                 <p class="hero-tagline">The Viral TikTok Dance Coin</p>
                 <a href="https://dexscreener.com/solana/675orb1ewxxmpqxnqyzy8hm2fbqammv9e29vycnbhvk6" class="cta-btn" target="_blank">Buy Now</a>
             </div>
+            <!-- Floating Emojis Container -->
+            <div class="emoji-container"></div>
         </section>
+
+        <!-- Meme Ticker -->
+        <div class="meme-ticker">
+            <div class="ticker-content">
+                <span>ANXIETY GO BRRR • </span>
+                <span>SOMEBODY’S WATCHING ME • </span>
+                <span>DANCE LIKE NO ONE’S JUDGING • </span>
+                <span>TO THE MOON OR BUST • </span>
+            </div>
+        </div>
 
         <!-- About Section -->
         <section id="about" class="about">
@@ -86,6 +98,14 @@
         </div>
     </footer>
 
+    <!-- SVG Noise Filter -->
+    <svg id="noise-filter">
+        <filter id="noise">
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+            <feColorMatrix type="saturate" values="0"/>
+        </filter>
+    </svg>
+
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
@@ -106,16 +126,64 @@
             });
         });
 
-        // Parallax Effect for Hero Banner (Background Only)
-        gsap.to('#hero', {
-            backgroundPosition: 'center 60%', // Moves background noticeably
+        // Parallax Effect for Hero Banner
+        gsap.to('.hero', {
+            backgroundPosition: 'center 100%',
             ease: 'none',
             scrollTrigger: {
-                trigger: '#hero',
+                trigger: '.hero',
                 start: 'top top',
                 end: 'bottom top',
-                scrub: 1 // Smooth and pronounced effect
+                scrub: 1
             }
+        });
+
+        // Glitch Effect for Hero Logo on Hover
+        const heroLogo = document.querySelector('.hero-logo');
+        heroLogo.addEventListener('mouseenter', () => {
+            gsap.to(heroLogo, {
+                x: () => Math.random() * 10 - 5,
+                y: () => Math.random() * 10 - 5,
+                duration: 0.1,
+                repeat: 5,
+                yoyo: true,
+                ease: 'power1.inOut',
+                onComplete: () => gsap.set(heroLogo, { x: 0, y: 0 })
+            });
+        });
+
+        // Floating Emojis
+        const emojis = ['💃', '🕺', '🎵', '🔥', '😬'];
+        const emojiContainer = document.querySelector('.emoji-container');
+        function createEmoji() {
+            const emoji = document.createElement('span');
+            emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+            emoji.className = 'floating-emoji';
+            emoji.style.left = `${Math.random() * 100}%`;
+            emojiContainer.appendChild(emoji);
+            gsap.to(emoji, {
+                y: -window.innerHeight - 100,
+                opacity: 0,
+                duration: 3 + Math.random() * 2,
+                ease: 'power1.out',
+                onComplete: () => emoji.remove()
+            });
+        }
+        setInterval(createEmoji, 1000);
+
+        // Section Fade-In Animation
+        gsap.utils.toArray('section').forEach(section => {
+            gsap.from(section, {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: section,
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                }
+            });
         });
     </script>
 </body>
