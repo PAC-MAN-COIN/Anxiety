@@ -175,25 +175,6 @@ body {
     pointer-events: none;
 }
 
-/* Floating Emojis */
-.emoji-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
-.floating-emoji {
-    position: absolute;
-    font-size: 2rem;
-    bottom: 0;
-    opacity: 1;
-    color: #FF69B4;
-    text-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
-}
-
 .hero-overlay {
     background: rgba(0, 0, 0, 0.4);
     padding: 60px;
@@ -203,7 +184,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    z-index: 1; /* Above emojis */
+    z-index: 1;
 }
 
 .hero-logo {
@@ -296,7 +277,6 @@ body {
 .social-links {
     display: flex;
     justify-content: center;
-    daydreams;
     gap: 30px;
     margin-top: 20px;
 }
@@ -492,8 +472,8 @@ svg#noise-filter {
         padding: 10px 15px;
     }
 
-    .floating-emoji {
-        font-size: 1.5rem;
+    .ticker-content {
+        animation: ticker 10s linear infinite; /* Faster on mobile */
     }
 }
 
@@ -538,9 +518,5 @@ svg#noise-filter {
 
     .ticker-content span {
         font-size: 0.8rem;
-    }
-
-    .floating-emoji {
-        font-size: 1rem;
     }
 }

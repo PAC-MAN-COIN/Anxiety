@@ -37,8 +37,6 @@
                 <p class="hero-tagline">The Viral TikTok Dance Coin</p>
                 <a href="https://dexscreener.com/solana/675orb1ewxxmpqxnqyzy8hm2fbqammv9e29vycnbhvk6" class="cta-btn" target="_blank">Buy Now</a>
             </div>
-            <!-- Floating Emojis Container -->
-            <div class="emoji-container"></div>
         </section>
 
         <!-- Meme Ticker -->
@@ -151,25 +149,6 @@
                 onComplete: () => gsap.set(heroLogo, { x: 0, y: 0 })
             });
         });
-
-        // Floating Emojis
-        const emojis = ['💃', '🕺', '🎵', '🔥', '😬'];
-        const emojiContainer = document.querySelector('.emoji-container');
-        function createEmoji() {
-            const emoji = document.createElement('span');
-            emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-            emoji.className = 'floating-emoji';
-            emoji.style.left = `${Math.random() * 100}%`;
-            emojiContainer.appendChild(emoji);
-            gsap.to(emoji, {
-                y: -window.innerHeight - 100,
-                opacity: 0,
-                duration: 3 + Math.random() * 2,
-                ease: 'power1.out',
-                onComplete: () => emoji.remove()
-            });
-        }
-        setInterval(createEmoji, 1000);
 
         // Section Fade-In Animation
         gsap.utils.toArray('section').forEach(section => {
