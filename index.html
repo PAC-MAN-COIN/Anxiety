@@ -106,27 +106,15 @@
             });
         });
 
-        // Enhanced Parallax Effect for Hero Background
+        // Parallax Effect for Hero Banner (Background Only)
         gsap.to('#hero', {
-            backgroundPosition: 'center 60%', // Moves background more noticeably
+            backgroundPosition: 'center 60%', // Moves background noticeably
             ease: 'none',
             scrollTrigger: {
                 trigger: '#hero',
                 start: 'top top',
                 end: 'bottom top',
-                scrub: 1 // Smoother and more pronounced effect
-            }
-        });
-
-        // Parallax Effect for Hero Logo
-        gsap.to('.hero-logo', {
-            y: 50, // Slight vertical movement
-            ease: 'none',
-            scrollTrigger: {
-                trigger: '#hero',
-                start: 'top top',
-                end: 'bottom top',
-                scrub: 1.5 // Slightly faster than background for depth
+                scrub: 1 // Smooth and pronounced effect
             }
         });
     </script>
